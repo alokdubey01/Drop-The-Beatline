@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+    <link rel="stylesheet" href="Css/style.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+    <!--Typed.js-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typed.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="DTB">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="DTB"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="DTB"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="DTB"></script>
+    <title>DTB</title>
+  </head>
+  <body style="background:#1b1b1b">
+    <div class="hero">
+      <div class="pc">
+<ul class="nav">
+  <h1>Drop The Beatline</h1>
+  <li class="nav-item">
+    <a style="text-decoration:none"class="nav-link active" href="Index.html"><i class="fas fa-home"></i></a>
+  </li>
+  <li class="nav-item">
+    <a style="text-decoration:none"class="nav-link" href="contact.html"><i class="fas fa-envelope"></i></a>
+  </li>
+  <li class="nav-item">
+    <a style="text-decoration:none" class="nav-link" href="search.html"><i class="fas fa-download"></i></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="player.html"><i class="fas fa-music"></i></a>
+  </li>
+</ul>
+      </div>
+      <div class="mobile">
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="Index.html">DTB</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+           <li class="nav-item">
+        <a class="nav-link" href="Index.html">Home</a></li>
+      <li class="nav-item active">
+        <a class="nav-link" href="search.html">Download <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact Us</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Tunes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Sad</a>
+          <a class="dropdown-item" href="#">Romantic</a>
+          <a class="dropdown-item" href="#">Mood Off</a>
+        <!--  <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>-->
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+      </div>
+      </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<h1 class="text">Search & Download</h1>
+<input type="text" id="searchInput" placeholder="Search fruits">
+
+<ul id="fruits">
+  <li><a style="text-decoration:none"href="music/woofer.mp3"download>Wajda Woofer</a></li>
+  <li><a style="text-decoration:none"href="music/shot on iphone.mp3"download>Shot On Iphone</a></li>
+  <li><a style="text-decoration:none"href="music/are yarr.mp3"download>Are yarr</a></li>
+  <li><a style="text-decoration:none"href="music/pawri.mp3"download>Pawri</a></li>
+  <li><a style="text-decoration:none"href="music/harmane.mp3"download>Harmane(remix)</a></li>
+</ul>
+<script>
+$("#searchInput").on('keyup', function() {
+  var searchValue = $(this).val();
+  searchAndFilter(searchValue)
+});
+
+function searchAndFilter(searchTerm) {
+  if (searchTerm == '') {
+    $("#fruits li").hide()
+  } else {
+    $("#fruits li").each(function() {
+      var currentText = $(this).text();
+      currentText = currentText.toUpperCase();
+      searchTerm = searchTerm.toUpperCase();
+      if (currentText.indexOf(searchTerm) >= 0) {
+        $(this).show();
+      }
+    });
+  }
+}
+
+$(document).ready(function() {
+  $("#fruits li").hide();
+});
+</script>
+  </body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css" media="all">
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.container{
+  max-width: 800px;
+  background: #fff;
+  width: 800px;
+  padding: 25px 40px 10px 40px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+.container .text{
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container form{
+  padding: 30px 0 0 0;
+}
+.container form .form-row{
+  display: flex;
+  margin: 32px 0;
+}
+form .form-row .input-data{
+  width: 100%;
+  height: 40px;
+  margin: 0 20px;
+  position: relative;
+}
+form .form-row .textarea{
+  height: 70px;
+}
+.input-data input,
+.textarea textarea{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid rgba(0,0,0, 0.12);
+}
+.input-data input:focus ~ label, .textarea textarea:focus ~ label,
+.input-data input:valid ~ label, .textarea textarea:valid ~ label{
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #3498db;
+}
+.textarea textarea{
+  resize: none;
+  padding-top: 10px;
+}
+.input-data label{
+  position: absolute;
+  pointer-events: none;
+  bottom: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.textarea label{
+  width: 100%;
+  bottom: 40px;
+  background: #fff;
+}
+.input-data .underline{
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+.input-data .underline:before{
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #3498db;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before,
+.textarea textarea:focus ~ .underline:before,
+.textarea textarea:valid ~ .underline:before{
+  transform: scale(1);
+}
+.submit-btn .input-data{
+  overflow: hidden;
+  height: 45px!important;
+  width: 25%!important;
+}
+@media (max-width: 700px) {
+  .container .text{
+    font-size: 30px;
+  }
+  .container form{
+    padding: 10px 0 0 0;
+  }
+  .container form .form-row{
+    display: block;
+  }
+  form .form-row .input-data{
+    margin: 35px 0!important;
+  }
+  .submit-btn .input-data{
+    width: 30%!important;
+  }
+}
+.navbar{
+  width: 100%;
+}
+    </style>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+  <link rel="stylesheet" href="Css/style.css">
+    <!--Typed.js-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typed.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="DTB">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="DTB"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="DTB"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="DTB"></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+    <link rel="stylesheet" href="Css/search.css" title="" type="" />
+    <title>DTB</title>
+  </head>
+  <body>
+   <div class="hero">
+      <div class="pc">
+<ul class="nav">
+  <h1>Drop The Beatline</h1>
+  <li class="nav-item">
+    <a style="text-decoration:none"class="nav-link active" href="Index.html"><i class="fas fa-home"></i></a>
+  </li>
+  <li class="nav-item">
+    <a style="text-decoration:none"class="nav-link" href="contact.html"><i class="fas fa-envelope"></i></a>
+  </li>
+  <li class="nav-item">
+    <a style="text-decoration:none" class="nav-link" href="search.html"><i class="fas fa-download"></i></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="player.html"><i class="fas fa-music"></i></a>
+  </li>
+</ul>
+      </div>
+      <div class="mobile">
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="Index.html">DTB</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+        <a class="nav-link" href="Index.html">Home</a>
+      </li>
+            <li class="nav-item">
+        <a class="nav-link" href="search.html">Download</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="Index.html">Contact Us <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Tunes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Sad</a>
+          <a class="dropdown-item" href="#">Romantic</a>
+          <a class="dropdown-item" href="#">Mood Off</a>
+        <!--  <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>-->
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+      </div>
+      </div>
+    <div class="container">
+      <div class="text">
+Contact us Form</div>
+<form action="contact.php">
+        <div class="form-row">
+          <div class="input-data">
+            <input type="text" class="fname"required>
+            <div class="underline">
+</div>
+<label for="">First Name</label>
+          </div>
+<div class="input-data">
+            <input type="text"name="lname" required>
+            <div class="underline">
+</div>
+<label for="">Last Name</label>
+          </div>
+</div>
+<div class="form-row">
+          <div class="input-data">
+            <input type="email"name="email" required>
+            <div class="underline">
+</div>
+<label for="">Email Address</label>
+          </div>
+<div class="input-data">
+            <input type="text" name="text"required>
+            <div class="underline">
+</div>
+<label for="">Write your massage</label>
+          </div>
+</div>
+<div class="form-row">
+          <div class="input-data textarea">
+            <br />
+<div class="underline">
+</div>
+        <br />
+<button style="background: #3498db;border: none;outline: none;color:white;font-weight:bold;padding:8px;border-radius:8px;margin-left:35%" type="submit">SUBMIT</button>
+
+      </form>
+    </div>
+
+  </body>
+</html>
