@@ -1,2 +1,4 @@
 # Drop-The-Beatline
-For saurabh's website.
+# This is not Responsible 
+
+For saurabh's website. I created it for my neighbor's satisfaction.
